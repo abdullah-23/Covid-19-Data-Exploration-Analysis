@@ -1,3 +1,6 @@
+
+-- Viewing the available data
+
 SELECT location, date, total_cases, new_cases, total_deaths, population
 FROM public."CovidDeaths"
 WHERE continent IS NOT NULL
