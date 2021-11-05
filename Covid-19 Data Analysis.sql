@@ -50,7 +50,7 @@ WHERE continent IS NOT NULL
 GROUP BY location
 ORDER BY total_death_count DESC NULLS LAST;
 
--- Highest death counts with respect to continent
+-- Continent-wise highest death counts
 
 SELECT location, MAX(total_deaths) AS total_death_count
 FROM public."CovidDeaths"
@@ -113,6 +113,7 @@ WHERE deaths.continent IS NOT NULL
 SELECT *, (rolling_people_vaccinated/population)*100 AS rolling_vaccinated_percentage
 FROM PopvsVacc
 
+
 -- TEMP Table
 
 -- IN case modification to table needed, 
@@ -157,6 +158,7 @@ WHERE deaths.continent IS NOT NULL;
 
 SELECT *
 FROM PercentPopulationVaccinated;
+
 
 -- Analysis of hospital bed capacity country wise
 
